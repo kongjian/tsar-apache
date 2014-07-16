@@ -4,10 +4,10 @@
   `make`
 
 2.将asar_apache_agent部署到服务器   
-  `make install`,默认会安装到/usr/local/sbin/asar_apache_agent
+  `make install`,默认会安装到/usr/local/sbin/asar_apache_agent    
   或者拷贝到指定目录，比如/usr/local/sbin/asar_apache_agent   
 
-3.配置apache的CustomLog，注意asar_apache_agent的目录要保持一致   
+3.配置apache的CustomLog，注意asar_apache_agent的目录要保持一致          
   `CustomLog "|/usr/local/sbin/asar_apache_agent" "%D"`    
   
 4.重启apache，配置/etc/tsar/tsar.conf确保开启mod_apache on
