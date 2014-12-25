@@ -18,7 +18,9 @@
     root     12323  0.0  0.0   3652   348 ?        S    14:22   0:00 /usr/local/sbin/asar_apache_agent
     kongjian 12367  0.0  0.0  61132   752 pts/14   S+   14:22   0:00 grep agent
     
-5.使用tsar查看apache的数据
+5.使用tsar查看apache的数据 
+
+asar_apache采集的数据会临时保存在/tmp/apachert.mmap里面，配置成功时，这个文件会存在，否则kill掉asar_apache_agent,重启httpd
 
     tsar --apache -l -i 1
     -bash-3.2$ tsar --apache -l -i 1
